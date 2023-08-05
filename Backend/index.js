@@ -11,7 +11,7 @@ app.use(express.json())
 app.use(cors())
 
 app.get('/',(req,res)=>{
-    res.status(200).send(`<h1 style="color:blue;text-align:center">Welcome to Code Conversion Generator Backend</h1>`)
+    res.status(200).send(`<h1 style="color:red;text-align:center">Welcome to Code Convertor Generator Backend</h1>`)
 })
 
 app.use('/api',codeConvertorRouter)

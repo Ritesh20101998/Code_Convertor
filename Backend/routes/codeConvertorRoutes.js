@@ -16,4 +16,4 @@ codeConvertorRouter.post("/debug", codeConvertorControllerDebug);
 // Endpoint for checking code quality
 codeConvertorRouter.post("/quality", codeConvertorControllerQuality);
 
-module.exports = { codeConvertorRouter };
+module.exports = {codeConvertorRouter};
