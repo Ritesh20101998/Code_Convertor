@@ -1,41 +1,35 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="https://th.bing.com/th/id/OIP.PImzt1FWyESqWVuNvIPdjAAAAA?w=150&h=180&c=7&r=0&o=5&pid=1.7" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <title>Code Converter | OpenAI</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Code Converter App</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1 class="mainContent">Code Convertor</h1>
-        <hr>
-        <div class="form-group">
-            <label for="language">Language:</label>
-            <input type="text" id="language" placeholder="Write Language Here">
-          </div>
-        <div class="form-group">
-          <label for="code">Code:</label>
-          <textarea id="code" rows="12" cols="40" placeholder="Write Code Here"></textarea>
-        </div>
-        <div class="form-group">
-          <button id="convert-btn">Convert</button>
-          <button id="debug-btn">Debug</button>
-          <button id="quality-btn">Check Quality</button>
-        </div>
-        <div class="output">
-          <h2>Output:</h2>
-          <div id="output"></div>
-          <div id="loader" class="loader">
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-            <div class="circle"></div>
-          </div>
-          <button id="copy-btn" class="copy-button" onclick="copyOutput()">Copy</button>
-        </div>
-      </div>    
-    <script src="./index.js"></script>
+  <header>
+    <h1>Code Converter App</h1>
+  </header>
+  <main>
+    <form id="codeForm">
+      <label for="codeTextarea">Input Code:</label>
+      <textarea id="codeTextarea" rows="10" cols="50"></textarea>
+
+      <label for="languageSelect">Select Language:</label>
+      <select id="languageSelect">
+        <option value="">Select Language</option>
+        <option value="js">JavaScript</option>
+        <option value="java">Java</option>
+        <option value="python">Python</option>
+        <option value="c++">C++</option>
+      </select>
+
+      <button id="convertBtn">Convert Code</button>
+      <button id="debugBtn">Debug Code</button>
+      <button id="qualityBtn">Check Quality</button>
+    </form>
+
+    <div id="responseContainer"></div>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>

@@ -1,110 +1,63 @@
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-  
-.mainContent{
-    color: Red;
-    text-align: center;
-}
-  
-.form-group {
-    margin-bottom: 20px;
-}
-  
-.form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-  
-.form-group textarea,
-.form-group input {
-    width: 95%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #ffcaca2a;
-    color: rgb(64, 84, 237);
-    font-size: 20px;
-}
-  
-.form-group input {
-    text-transform: capitalize;
-    
-}
-  
-.form-group button {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-  
-.form-group button:hover {
-    background-color: #45a049;
-}
-  
-.output {
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 10px;
-    position: relative;
-    overflow-wrap: break-word;
-    word-break: break-all;
-}
-  
-.loader {
-    display: flex;
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.circle{
-    height:20px;
-    width:20px;
-    background-color: #fff;
-    border-radius: 50%;
-    margin: 0 0.5rem;
-    animation: loading 1.3s linear infinite;
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
 }
-.circle:nth-child(1){
-    animation-delay: 0.2s;
+
+main {
+    padding: 2rem;
 }
-.circle:nth-child(2){
-    animation-delay: 0.4s;
+
+form {
+    margin-bottom: 1rem;
 }
-.circle:nth-child(3){
-    animation-delay: 0.6s;
+
+label,
+textarea,
+select {
+    display: block;
+    margin-bottom: 0.5rem;
 }
-.circle:nth-child(4){
-    animation-delay: 0.8s;
-}
-  
-@keyframes loading{
-    0% {
-        transform: scale(0.5);
-    }
-    50%{
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(0.5);
-    }
-}
-  
-.copy-button {
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    padding: 8px;
-    background-color: #4caf50;
-    color: black;
+
+button {
+    background-color: #007bff;
+    color: white;
     border: none;
-    border-radius: 4px;
+    padding: 0.5rem 1rem;
     cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#responseContainer {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    display: none;
+    margin-top: 1rem;
+}
+
+#responseContainer {
+    border: 1px solid #ccc;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#responseContainer p {
+    font-size: 16px;
+    line-height: 1.5;
 }

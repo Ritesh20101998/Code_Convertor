@@ -10,14 +10,12 @@ const codeConvertorSchema = mongoose.Schema({
         required: true,
     },
     convertedCode: {
-        type: String,
-        required: true,
+        type: String
     }
-    },
-{
-    versionKey : false
+}, {
+    versionKey: false
 });
 
-const codeConvertorModel = mongoose.model("Codes", codeConvertorSchema);
+const codeConvertorModel = mongoose.model("CodeConvertor", codeConvertorSchema);
 
 module.exports = { codeConvertorModel };
