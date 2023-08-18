@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const prompt = codeTextarea.value;
         const language = languageSelect.value;
 
-        const response = await fetch("https://code-convertor-app.onrender.com/convert", {
+        const response = await fetch("http://code-convertor-app.onrender.com/convert", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const prompt = codeTextarea.value;
 
-        const response = await fetch("https://code-convertor-app.onrender.com/debug", {
+        const response = await fetch("http://code-convertor-app.onrender.com/debug", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const prompt = codeTextarea.value;
 
-        const response = await fetch("https://code-convertor-app.onrender.com/quality", {
+        const response = await fetch("http://code-convertor-app.onrender.com/quality", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

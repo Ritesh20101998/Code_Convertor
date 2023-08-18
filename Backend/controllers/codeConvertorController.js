@@ -15,7 +15,7 @@ async function generateCompletion(prompt) {
         const openai = new OpenAIApi(configuration);
 
         const response = await openai.createCompletion({
-            model: "gpt-3.5-turbo",
+            model: "text-davinci-003",
             prompt: prompt,
             max_tokens: maxTokens,
             n: n,
@@ -38,8 +38,8 @@ async function generateCompletion(prompt) {
 const codeConvertorController = async(req, res) => {
     try {
         const { prompt, language } = req.body;
-
-        // Generate code conversion completion
+        console.log(prompt)
+            // Generate code conversion completion
         let response = await generateCompletion(
             `Convert the following code: ${prompt} to ${language} code. If the code is incorrect or not complete, please make guesses and complete it.`
         );
@@ -61,8 +61,8 @@ const codeConvertorController = async(req, res) => {
 const codeConvertorControllerDebug = async(req, res) => {
     try {
         const { prompt } = req.body;
-
-        // Generate code debugging completion
+        console.log(prompt)
+            // Generate code debugging completion
         let response = await generateCompletion(
             `Debug the following code: ${prompt}. Please check if there are any errors and also correct them. Additionally, if the code is correct, provide steps on what the code is doing and how we can improve it.`
         );
@@ -76,8 +76,8 @@ const codeConvertorControllerDebug = async(req, res) => {
 const codeConvertorControllerQuality = async(req, res) => {
     try {
         const { prompt } = req.body;
-
-        // Generate code quality check completion
+        console.log(prompt)
+            // Generate code quality check completion
         let response = await generateCompletion(
             `Check the quality of the following code: ${prompt}. Please provide detailed information and also provide some tips to improve. Provide in points.`
         );
