@@ -1,5 +1,5 @@
 const express = require('express')
-    // const cors = require('cors')
+const cors = require('cors')
 const bodyParser = require("body-parser");
 const Axios = require('axios')
 require('dotenv').config();
@@ -7,7 +7,7 @@ require('dotenv').config();
 const app = express()
 app.use(express.json())
 app.use(bodyParser.json());
-// app.use(cors())
+app.use(cors())
 
 
 const { connection } = require("./config/db");
@@ -18,9 +18,9 @@ const {
 } = require("./controllers/codeConvertorController");
 
 // Define your routes
-app.get("/convert", codeConvertorController);
-app.get("/quality", codeConvertorControllerQuality);
-app.get("/debug", codeConvertorControllerDebug);
+app.post("/convert", codeConvertorController);
+app.post("/quality", codeConvertorControllerQuality);
+app.post("/debug", codeConvertorControllerDebug);
 
 app.get('/', (req, res) => {
     res.status(200).send(`<h1 style="color:red;text-align:center">Welcome to Code Convertor Generator Backend</h1>`)

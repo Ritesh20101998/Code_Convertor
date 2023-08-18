@@ -1,17 +1,10 @@
 const mongoose = require("mongoose");
 
 const codeConvertorSchema = mongoose.Schema({
-    prompt: {
-        type: String,
-        required: true,
-    },
-    language: {
-        type: String,
-        required: true,
-    },
-    convertedCode: {
-        type: String
-    }
+    prompt: String,
+    language: String,
+    convertedCode: String
+    
 }, {
     versionKey: false
 });

@@ -53,7 +53,7 @@ const codeConvertorController = async(req, res) => {
 
         res.status(200).json({ response });
     } catch (error) {
-        res.status(500).json({ error: "An error occurred" });
+        res.status(500).json({ error: "An error occurred in convert" });
     }
 };
 
@@ -68,7 +68,7 @@ const codeConvertorControllerDebug = async(req, res) => {
         );
         res.status(200).json({ response });
     } catch (error) {
-        res.status(500).json({ error: "An error occurred" });
+        res.status(500).json({ error: "An error occurred in debug" });
     }
 };
 
@@ -84,7 +84,7 @@ const codeConvertorControllerQuality = async(req, res) => {
         console.log(response);
         res.status(200).json({ response });
     } catch (error) {
-        res.status(500).json({ error: "An error occurred" });
+        res.status(500).json({ error: "An error occurred in quality" });
     }
 };
 
