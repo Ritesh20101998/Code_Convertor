@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const debugBtn = document.getElementById("debugBtn");
     const qualityBtn = document.getElementById("qualityBtn");
     const responseContainer = document.getElementById("responseContainer");
+    const baseURL = 'http://code-convertor-app.onrender.com'
 
     codeForm.addEventListener("submit", async(e) => {
         e.preventDefault();
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const prompt = codeTextarea.value;
         const language = languageSelect.value;
 
-        const response = await fetch("http://code-convertor-app.onrender.com/convert", {
+        const response = await fetch(`${baseURL}/convert`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -30,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const prompt = codeTextarea.value;
 
-        const response = await fetch("http://code-convertor-app.onrender.com/debug", {
+        const response = await fetch(`${baseUR}/debug`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -47,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const prompt = codeTextarea.value;
 
-        const response = await fetch("http://code-convertor-app.onrender.com/quality", {
+        const response = await fetch(`${baseURL}/quality`, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
