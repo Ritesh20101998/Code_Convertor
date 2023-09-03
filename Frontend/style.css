@@ -1,63 +1,71 @@
-body {
-    font-family: Arial, sans-serif;
+html, body, h1, h2, p, ul, li {
     margin: 0;
     padding: 0;
 }
-
+  
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+  
+/* Style the header */
 header {
-    background-color: #333;
-    color: white;
+    background-color: green;
+    color: #fff;
     text-align: center;
-    padding: 1rem;
+    padding: 20px 0;
 }
-
+  
+/* Style the main content area */
 main {
-    padding: 2rem;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
-
+  
+/* Style form elements */
 form {
-    margin-bottom: 1rem;
+    display: grid;
+    gap: 10px;
 }
-
-label,
-textarea,
-select {
-    display: block;
-    margin-bottom: 0.5rem;
+  
+label {
+    font-weight: bold;
 }
-
+  
+textarea, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+  
 button {
-    background-color: #007bff;
-    color: white;
+    background-color: green;
+    color: #fff;
     border: none;
-    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    padding: 10px 20px;
     cursor: pointer;
 }
-
-button:hover {
-    background-color: #0056b3;
+  
+#responseContainer{
+    border:1px solid black;
+    padding: 30px;
+    border-radius: 5px;
 }
-
-#responseContainer {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    display: none;
-    margin-top: 1rem;
+/* Media queries for responsiveness */
+@media screen and (max-width: 600px) {
+    main {
+      margin: 10px;
+      padding: 10px;
+    }
+  
+    button {
+      width: 100%;
+    }
 }
-
-#responseContainer {
-    border: 1px solid #ccc;
-    padding: 1rem;
-    margin-top: 1rem;
-    background-color: #f9f9f9;
-    border-radius: 4px;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#responseContainer p {
-    font-size: 16px;
-    line-height: 1.5;
-}
+  
