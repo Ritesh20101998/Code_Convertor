@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const debugBtn = document.getElementById("debugBtn");
     const qualityBtn = document.getElementById("qualityBtn");
     const responseContainer = document.getElementById("responseContainer");
-    const baseURL = 'http://code-convertor-app.onrender.com/'
+    const baseURL = 'https://code-convertor-app.onrender.com/'
 
     codeForm.addEventListener("submit", async(e) => {
         e.preventDefault();
