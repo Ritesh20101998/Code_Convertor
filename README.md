@@ -2,6 +2,12 @@
 
 The Code Converter App is a web application that allows you to convert code written in one programming language into another. It supports conversions between JavaScript, Java, Python, and C++. The app provides a simple and user-friendly interface for entering your code and selecting the target language.
 
+## Live Demo
+
+- **Frontend**: You can access the live frontend of the Code Converter App [here](https://64f48425fca83818e5422cab--luxury-moonbeam-f5f809.netlify.app/).
+
+- **Backend**: The backend is hosted at [http://code-convertor-app.onrender.com](http://code-convertor-app.onrender.com).
+
 ## Features
 
 - Convert code between JavaScript, Java, Python, and C++.
