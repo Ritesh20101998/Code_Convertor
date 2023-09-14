@@ -9,7 +9,7 @@ async function generateCompletion(prompt) {
         const n = 1;
 
         const configuration = new Configuration({
-            apiKey: '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',
+            apiKey: process.env.OPENAI_API_KEY
         });
 
         const openai = new OpenAIApi(configuration);
